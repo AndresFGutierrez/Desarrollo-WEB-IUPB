@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto PIA</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registro Proyectos PIA</h1>
+      <section class="panel-principal">
+        <aside class="opciones">
+          <button id="btn-listar">Listar Proyectos (GET)</button>
+          <button id="btn-crear">Crear Proyecto (POST)</button>
+          <button id="btn-actualizar">Actualizar Proyecto (PUT)</button>
+          <button id="btn-eliminar">Eliminar Proyecto (DELETE)</button>
+        </aside>
+
+        <div class="panel-derecha">
+          <section class="formulario">
+            <h2>Datos del proyecto</h2>
+            <form action="" id="tipo-proyecto-form">
+              <div class="form-group">
+                <label for="id">ID:</label>
+                <input required type="number" id="id" name="id" />
+              </div>
+              <div class="form-group">
+                <label for="codigo">Codigo:</label>
+                <input required type="number" id="codigo" name="codigo" />
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <input
+                  required
+                  type="text"
+                  id="descripcion"
+                  name="descripcion"
+                />
+              </div>
+              <div class="form-group">
+                <label for="abreviatura">Abreviatura:</label>
+                <input
+                  required
+                  type="text"
+                  id="abreviatura"
+                  name="abreviatura"
+                />
+              </div>
+            </form>
+          </section>
+
+          <section class="respuesta-servidor">
+            <h2>Respuesta del Servidor</h2>
+            <div class="status-code">
+              Código HTTP: <span id="status-code">---</span>
+            </div>
+            <pre id="response-message">Esperando operación...</pre>
+          </section>
+        </div>
+      </section>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
